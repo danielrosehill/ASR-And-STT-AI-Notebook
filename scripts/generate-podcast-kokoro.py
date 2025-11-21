@@ -25,7 +25,7 @@ if not HF_API_KEY:
     sys.exit(1)
 
 KOKORO_MODEL = "hexgrad/Kokoro-82M"
-HF_API_URL = f"https://api-inference.huggingface.co/models/{KOKORO_MODEL}"
+HF_API_URL = f"https://router.huggingface.co/models/{KOKORO_MODEL}"
 
 def strip_ssml_tags(ssml_content):
     """Remove SSML tags and return plain text for TTS."""
