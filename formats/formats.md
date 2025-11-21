@@ -19,13 +19,28 @@ This file is directly usable for STT/inference. However, given the wide variety 
 - **Advantages**: Safe serialization format, prevents arbitrary code execution
 - **Disadvantages**: Limited compatibility with optimized inference engines
 
-### GGML
+### GGML (Legacy)
 
 - **File extension**: `.bin`
 - **Use case**: CPU-only inference on edge devices (e.g., FUTO Keyboard)
-- **Compatible with**: `whisper.cpp`
+- **Compatible with**: `whisper.cpp` (older versions)
 - **Advantages**: Enables deployment on resource-constrained devices, edge computing
+- **Status**: Legacy format, superseded by GGUF
 - **Considerations**: Hardware limitations still apply. Consider converting Tiny models to GGML for mobile/edge deployment while keeping Base or larger models in CTranslate2 for desktop applications.
+
+### GGUF (Recommended for Edge/CPU)
+
+- **File extension**: `.gguf`
+- **Use case**: CPU-only inference on edge devices, local deployment
+- **Compatible with**: Modern `whisper.cpp`, llama.cpp ecosystem
+- **Advantages**:
+  - Improved metadata handling (embedded model info, hyperparameters)
+  - Better version control and compatibility checking
+  - More efficient storage and loading
+  - Standardized format across llama.cpp ecosystem
+  - Supports quantization for smaller model sizes
+- **Best for**: Modern edge deployments, CPU inference, resource-constrained environments
+- **Migration**: GGUF is the successor to GGML and should be preferred for new projects
 
 ### CTranslate2
 
@@ -62,7 +77,8 @@ This file is directly usable for STT/inference. However, given the wide variety 
 | Format | Best Use Case | Performance | Compatibility |
 |--------|---------------|-------------|---------------|
 | SafeTensors | Training, PyTorch apps | Baseline | PyTorch ecosystem |
-| GGML | Edge devices, CPU-only | Optimized for CPU | whisper.cpp projects |
+| GGML | Legacy edge devices | Optimized for CPU | Old whisper.cpp projects |
+| GGUF | Modern edge devices, CPU-only | Optimized for CPU | Modern whisper.cpp, llama.cpp |
 | CTranslate2 | Desktop apps, servers | High (GPU/CPU) | Faster Whisper, production apps |
 | ONNX | Cross-platform deployment | Good | Wide framework support |
 | Core ML | Apple devices | Excellent (on Apple HW) | Apple ecosystem only |
@@ -70,7 +86,7 @@ This file is directly usable for STT/inference. However, given the wide variety 
 
 ## Conversion Considerations
 
-- **Model size**: Larger models (Base, Small, Medium) may not be practical for GGML on edge devices
+- **Model size**: Larger models (Base, Small, Medium) may not be practical for GGML/GGUF on edge devices
 - **Target hardware**: GPU availability, CPU capabilities, RAM constraints
 - **Use case**: Real-time vs. batch processing, latency requirements
 - **Deployment environment**: Cloud, edge, mobile, desktop
