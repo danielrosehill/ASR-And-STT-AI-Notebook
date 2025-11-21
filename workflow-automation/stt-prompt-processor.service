@@ -1,0 +1,15 @@
+[Unit]
+Description=STT Fine-Tuning Prompt Processor (Watch Mode)
+After=network.target
+
+[Service]
+Type=simple
+User=daniel
+WorkingDirectory=/home/daniel/repos/github/STT-Fine-Tuning-Notebook/workflow-automation
+Environment="ANTHROPIC_API_KEY=YOUR_API_KEY_HERE"
+ExecStart=/bin/bash /home/daniel/repos/github/STT-Fine-Tuning-Notebook/workflow-automation/watch_and_process.sh
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

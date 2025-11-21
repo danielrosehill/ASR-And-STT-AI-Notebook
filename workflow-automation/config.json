@@ -1,0 +1,123 @@
+{
+  "category_keywords": {
+    "models": [
+      "model",
+      "whisper",
+      "wav2vec",
+      "architecture",
+      "hubert",
+      "conformer",
+      "parakeet",
+      "omnilingual",
+      "speecht5",
+      "wavlm",
+      "distil-whisper",
+      "asr model"
+    ],
+    "formats": [
+      "format",
+      "gguf",
+      "ggml",
+      "quantization",
+      "file format",
+      "export",
+      "serialization",
+      "bin",
+      "safetensors",
+      "pytorch"
+    ],
+    "training-data": [
+      "dataset",
+      "audio data",
+      "training data",
+      "data collection",
+      "corpus",
+      "librispeech",
+      "common voice",
+      "data volume",
+      "hours of audio"
+    ],
+    "pitfalls": [
+      "problem",
+      "issue",
+      "mistake",
+      "avoid",
+      "pitfall",
+      "error",
+      "common issue",
+      "troubleshooting",
+      "overfitting",
+      "underfitting"
+    ],
+    "fine-tuning": [
+      "training",
+      "fine-tuning",
+      "hyperparameter",
+      "epoch",
+      "learning rate",
+      "optimizer",
+      "training loop",
+      "loss function",
+      "gradient",
+      "backpropagation"
+    ],
+    "recommendations": [
+      "recommendation",
+      "best practice",
+      "should",
+      "consider",
+      "advice",
+      "guideline",
+      "suggestion",
+      "tip"
+    ],
+    "data-preparation": [
+      "preprocessing",
+      "preparation",
+      "cleaning",
+      "normalization",
+      "augmentation",
+      "audio processing",
+      "sample rate",
+      "format conversion",
+      "noise reduction"
+    ],
+    "ext-ref": [
+      "resource",
+      "reference",
+      "link",
+      "paper",
+      "documentation",
+      "external",
+      "github",
+      "repository",
+      "tutorial"
+    ]
+  },
+  "default_category": "ext-ref",
+  "naming_conventions": {
+    "prompts": {
+      "format": "YYYYMMDD-topic-keywords.txt or .md",
+      "examples": [
+        "20251121-model-comparison.txt",
+        "20251121-quantization-formats.md",
+        "20251121-training-data-volume.txt"
+      ]
+    },
+    "outputs": {
+      "format": "topic-keywords.md (lowercase, hyphen-separated)",
+      "examples": [
+        "model-selection-criteria.md",
+        "gguf-vs-ggml.md",
+        "training-data-requirements.md"
+      ]
+    },
+    "processed": {
+      "format": "YYYY-MM folders containing original-name_YYYYMMDD-HHMMSS.ext",
+      "examples": [
+        "2025-11/model-comparison_20251121-143022.txt",
+        "2025-11/quantization-formats_20251121-150445.md"
+      ]
+    }
+  }
+}
