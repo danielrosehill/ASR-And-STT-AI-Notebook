@@ -1,0 +1,10 @@
+# Python dependencies for podcast generation scripts
+
+# For SSML conversion (Stage 1)
+requests>=2.31.0
+
+# For TTS audio generation (Stage 2)
+edge-tts>=6.1.0
+
+# Optional: For better SSML handling
+lxml>=4.9.0

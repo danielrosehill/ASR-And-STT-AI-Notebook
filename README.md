@@ -29,6 +29,22 @@ This is primarily a collection of:
 3. [Book 3: Implementation Details](export/first-questions/parts/STT-Fine-Tuning-Guide-BOOK3.pdf)
 4. [Book 4: Practical Applications](export/first-questions/parts/STT-Fine-Tuning-Guide-BOOK4.pdf)
 
+### Podcast Format (NEW!)
+Convert the entire notebook into an audio podcast for listening on the go. See [PODCAST-WORKFLOW.md](PODCAST-WORKFLOW.md) for details.
+
+**Quick Start:**
+```bash
+cd scripts
+export OPENROUTER_API_KEY='your-key-here'
+./create-podcast.sh
+```
+
+Features:
+- Natural-sounding TTS with Microsoft Edge neural voices
+- SSML-enhanced speech with proper pacing and emphasis
+- Individual audio files by topic or single concatenated podcast
+- Free TTS (edge-tts), minimal cost for AI conversion (~$1-5)
+
 ## AI/Human Collaboration
 
 Content in this repository is generated through:
